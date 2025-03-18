@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <main>
+        <h1>
+            To Do List
+        </h1>
+        <div class="todolist">
+            <button id="open-task-form-btn" class="btn large-btn">
+                Add A New Item
+            </button>
+        <br>
+        <form class="task-form hidden">
+            <br>
+            <div class="task-form-header">
+                <button id="close-task-form-btn" class="close-task-form-btn" type="button">
+                </button>
+            </div>
+            <br>
+            <div class="task-form-body">
+                <label class="task-form-label" for="input">
+                    <input class="form-control" id="input" type="text" value=" " />
+                </label>
+                <label class="task-form-label" for="date">
+                    <input class="form-control" id="date" value="" type="date" />
+                </label>
+                <label class="task-form-label" for="description">
+                    <textarea class="form-control" id="description" cols="30" rows="5"></textarea>
+                </label>
+            </div>
+            <div class="task-footer">
+                <button id="update-or-delete-task" class="large-btn" type="submit">Add Task</button>
+            </div>
+        </form>
+        <dialog id="confirm-close-dialog">
+            <form method="dialog">
+                <p class="discard-message">Discard Unsaved Changes</p>
+                <div class="confirm-close-dialog-btn">
+                    <button id="cancel-btn" class="btn">
+                        Cancel
+                    </button>
+                    <button id="discard-btn" class="btn">
+                        Discard
+                    </button>
+                </div>
+            </form>
+            <div id="tasks-container"></div>
+        </dialog>
+    </div>
+    </main>
+</body>
+
+</html>

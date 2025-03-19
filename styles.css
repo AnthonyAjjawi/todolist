@@ -28,10 +28,11 @@ h1 {
     color: var(--liver);
     margin: 2rem 0rem 2rem 0rem;
 }
-/* #todolist {
+#todolist {
     display: flex;
     flex-direction: column;
-} */
+    position: relative; 
+}
 
 .task-form-body {
     display: flex;

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root {
     --misty-rose: #f4dbd8;
     --rose-quartz: #bea8a7;
@@ -15,6 +18,7 @@
 
 body {
     background-color: var(--misty-rose);
+    font-family:  "Poppins", sans-serif;
 }
 
 main {
@@ -26,18 +30,64 @@ main {
 
 h1 {
     color: var(--liver);
+   
     margin: 2rem 0rem 2rem 0rem;
 }
-#todolist {
+.todolist {
     display: flex;
     flex-direction: column;
+
+    width: 350px;
+    height: 500px;
     position: relative; 
+    border: 3px solid var(--rosy-brown);
+    border-radius: 8px;
+   
+    padding: 1rem; 
+    gap: 1rem;
 }
+
+.todolist:hover
+{
+    box-shadow: 5px 5px #83707021;
+    border-radius: 5px;
+}
+
 
 .task-form-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
 }
+
+.btn {
+    cursor: pointer;
+    width: 300px;
+    overflow: hidden;
+    background: var(--liver);
+    border: 2px;
+    border-width: 2px;
+    border-color: var(--liver);
+    padding: 5px;
+    border-radius: 3px;
+
+}
+
+.btn:hover {
+    background-image: linear-gradient(var(--liver), var(--rosy-brown));
+}
+
+.large-btn {
+    width: 80%;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.close-task-form-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+

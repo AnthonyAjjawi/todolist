@@ -17,24 +17,20 @@
             <button id="open-task-form-btn" class="btn large-btn">
                 Add A New Item
             </button>
-        <br>
         <form class="task-form hidden" id="task-form">
-            <br>
             <div class="task-form-header">
-                <button id="close-task-form-btn" class="close-task-form-btn" type="button">
+                <button id="close-task-form-btn" class="close-task-form-btn"  aria-label="close" type="button">
                 </button>
             </div>
-            <br>
             <div class="task-form-body">
-                <label class="task-form-label" for="input">
-                    <input class="form-control" id="input" type="text" value=" " />
-                </label>
-                <label class="task-form-label" for="date">
+                <label class="task-form-label" for="input">Title</label>
+                    <input class="form-control" id="input" type="text" value=" " required />
+            
+                <label class="task-form-label" for="date">Date</label>
                     <input class="form-control" id="date" value="" type="date" />
-                </label>
-                <label class="task-form-label" for="description">
+            
+                <label class="task-form-label" for="description">Description</label>
                     <textarea class="form-control" id="description" cols="30" rows="5"></textarea>
-                </label>
             </div>
             <div class="task-footer">
                 <button id="update-or-delete-task" class="large-btn" type="submit">Add Task</button>

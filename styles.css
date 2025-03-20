@@ -62,9 +62,31 @@ h1 {
     gap: 2rem;
 }
 
-.btn {
+#open-task-form-btn {
+   
+    position: absolute;
+    left: 55px;
+    top: 28px;
+   
     cursor: pointer;
-    width: 300px;
+    display: flex;
+    align-items: center;
+    width: 45%;
+    overflow: hidden;
+    background: var(--liver);
+    border: 2px;
+    border-width: 2px;
+    border-color: var(--liver);
+    padding: 5px;
+    border-radius: 3px;
+    
+}
+#update-or-delete-task {
+    cursor: pointer;
+    display: flex;
+
+    align-items: center;
+    width: 60%;
     overflow: hidden;
     background: var(--liver);
     border: 2px;
@@ -75,15 +97,15 @@ h1 {
 
 }
 
-.btn:hover {
+/* .btn:hover {
     background-image: linear-gradient(var(--liver), var(--rosy-brown));
-}
+} */
 
-.large-btn {
+/* .large-btn {
     width: 80%;
     font-size: 1rem;
     align-items: center;
-}
+} */
 
 .close-task-form-btn {
     background: none;
@@ -91,3 +113,28 @@ h1 {
     cursor: pointer;
 }
 
+
+.task-form  {
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+  
+ 
+    flex-direction: column;
+  
+}
+
+.task-form-header {
+    display: flex;
+    flex-direction: column ;
+}
+
+#description {
+   margin-bottom: 1rem;
+}
+#update-or-delete-task {
+    text-align: left;
+} 

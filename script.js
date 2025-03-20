@@ -1,6 +1,6 @@
 //access task-form, close-dialog, open-task-form btn
 
-const taskForm = document.getElementById("taskForm");
+const taskForm = document.getElementById("task-form");
 const close_Dialog = document.getElementById("confirm-close-dialog");
 const open_Task_Btn = document.getElementById("open-task-form-btn");
 

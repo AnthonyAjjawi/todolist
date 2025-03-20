@@ -14,3 +14,14 @@ const cancelBtn = document.getElementById("cancel-btn");
 const discardBtn = document.getElementById("discard-btn");
 const tasksContainer = document.getElementById("tasks-container");
 const titleInput = document.getElementById("input");
+
+//access date, description
+const dateInput = document.getElementById("date");
+const descriptionInput = document.getElementById("description");
+
+
+//empty array 
+const taskData = [];
+
+//current object
+let currentTask = {};

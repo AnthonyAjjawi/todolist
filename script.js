@@ -28,7 +28,21 @@ let currentTask = {};
 
 
 //toggle task form
-open_Task_Btn.addEventListener("click", () => {
-   taskForm.style.display = "none";
-   // taskForm.style.display = "block";
-})
+// open_Task_Btn.addEventListener("click", () => {
+//    taskForm.style.display = "none";
+  
+// })
+
+function showForm() {  
+    open_Task_Btn.addEventListener("click", () => {
+      taskForm.style.display = "none";
+
+      if (taskForm.style.display === "none") {
+         open_Task_Btn.addEventListener("click", () => {
+            taskForm.style.display = "block";
+         })
+      }
+    })
+
+ }
+ showForm();

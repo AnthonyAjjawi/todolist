@@ -29,5 +29,6 @@ let currentTask = {};
 
 //toggle task form
 open_Task_Btn.addEventListener("click", () => {
-   taskForm.classList.toggle("hidden");
+   taskForm.style.display = "none";
+   // taskForm.style.display = "block";
 })

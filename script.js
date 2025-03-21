@@ -27,22 +27,9 @@ const taskData = [];
 let currentTask = {};
 
 
-//toggle task form
-// open_Task_Btn.addEventListener("click", () => {
-//    taskForm.style.display = "none";
+// toggle task form
+open_Task_Btn.addEventListener("click", () => {
+   taskForm.classList.toggle("hidden");
   
-// })
+})
 
-function showForm() {  
-    open_Task_Btn.addEventListener("click", () => {
-      taskForm.style.display = "none";
-
-      if (taskForm.style.display === "none") {
-         open_Task_Btn.addEventListener("click", () => {
-            taskForm.style.display = "block";
-         })
-      }
-    })
-
- }
- showForm();

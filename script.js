@@ -33,3 +33,6 @@ open_Task_Btn.addEventListener("click", () => {
   
 })
 
+closeTaskFormBtn.addEventListener("click", () => {
+   close_Dialog.showModal();
+})

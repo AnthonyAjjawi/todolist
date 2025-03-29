@@ -1,24 +1,14 @@
-//access task-form, close-dialog, open-task-form btn
-
 const taskForm = document.getElementById("task-form");
-const close_Dialog = document.getElementById("confirm-close-dialog");
-const open_Task_Btn = document.getElementById("open-task-form-btn");
-
-
-//access close-task-form-btn, add-or-update-task-btn, cancel-btn
+const confirmCloseDialog = document.getElementById("confirm-close-dialog");
+const openTaskFormBtn = document.getElementById("open-task-form-btn");
 const closeTaskFormBtn = document.getElementById("close-task-form-btn");
-const addOrUpdateTaskBtn = document.getElementById("update-or-delete-task");
+const addOrUpdateTaskBtn = document.getElementById("add-or-update-task-btn");
 const cancelBtn = document.getElementById("cancel-btn");
-
-//access discard btn, task-container, title-input
 const discardBtn = document.getElementById("discard-btn");
 const tasksContainer = document.getElementById("tasks-container");
-const titleInput = document.getElementById("input");
-
-//access date, description
-const dateInput = document.getElementById("date");
-const descriptionInput = document.getElementById("description");
-
+const titleInput = document.getElementById("title-input");
+const dateInput = document.getElementById("date-input");
+const descriptionInput = document.getElementById("description-input");
 
 //empty array 
 const taskData = [];
@@ -27,12 +17,36 @@ const taskData = [];
 let currentTask = {};
 
 
-// toggle task form
-open_Task_Btn.addEventListener("click", () => {
+//toggle task form 
+openTaskFormBtn.addEventListener("click", () => {
    taskForm.classList.toggle("hidden");
-  
 })
 
-closeTaskFormBtn.addEventListener("click", () => {
-   close_Dialog.showModal();
+
+// show modal
+closeTaskFormBtn.addEventListener("click", () =>{
+ confirmCloseDialog.showModal();
 })
+
+cancelBtn.addEventListener("click", () => {
+   confirmCloseDialog.close();
+})
+
+
+discardBtn.addEventListener("click", () => {
+   confirmCloseDialog.close();
+   taskForm.classList.toggle("hidden");
+})
+// // toggle task form
+// open_Task_Btn.addEventListener("click", () => {
+//    taskForm.classList.toggle("hidden");
+  
+// })
+// //open up the dialog
+// closeTaskFormBtn.addEventListener("click", () => {
+//    close_Dialog.showModal();
+// })
+// //dialog close 
+// cancelBtn.addEventListener("click", () => {
+//    close_Dialog.close();
+// })

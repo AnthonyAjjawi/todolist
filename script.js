@@ -27,16 +27,22 @@ openTaskFormBtn.addEventListener("click", () => {
 closeTaskFormBtn.addEventListener("click", () =>{
  confirmCloseDialog.showModal();
 })
-
+// cancel
 cancelBtn.addEventListener("click", () => {
    confirmCloseDialog.close();
 })
 
-
+// discard
 discardBtn.addEventListener("click", () => {
    confirmCloseDialog.close();
    taskForm.classList.toggle("hidden");
 })
+
+// grabbing input
+taskForm.addEventListener("submit", (e) => {
+   e.preventDefault();
+})
+
 // // toggle task form
 // open_Task_Btn.addEventListener("click", () => {
 //    taskForm.classList.toggle("hidden");

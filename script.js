@@ -12,6 +12,9 @@ const descriptionInput = document.getElementById("description-input");
 
 const taskData = [];
 let currentTask = {};
+const reset = () => {
+  
+}
 
 openTaskFormBtn.addEventListener("click", () =>
   taskForm.classList.toggle("hidden")

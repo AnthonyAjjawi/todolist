@@ -23,17 +23,36 @@ const addOrUpdateTask = () => {
     description: descriptionInput.value,
   };
 
-   if (dataArrIndex === -1) {
+  if (dataArrIndex === -1) {
     taskData.unshift(taskObj);
   }
 }
+
+
+
+const updateTaskContainer = () => {
+  taskData.forEach(
+    ({ id, title, date, description }) => {
+      tasksContainer.innerHTML += `
+        <div class="task" id="${id}">
+          <p><strong>Title:</strong> ${title}</p>
+          <p><strong>Date:</strong> ${date}</p>
+          <p><strong>Description:</strong> ${description}</p>
+          <button type="button" class="btn">Edit</button>
+          <button type="button" class="btn">Delete</button>
+        </div>
+      `
+    }
+  );
+}
+
 
 
 const reset = () => {
   titleInput.value = "";
   dateInput.value = "";
   descriptionInput.value = "";
-  
+
   taskForm.classList.toggle("hidden");
   currentTask = {
 
@@ -52,7 +71,7 @@ closeTaskFormBtn.addEventListener("click", () => {
     reset();
   }
 
-  
+
 });
 
 cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
@@ -74,12 +93,12 @@ taskForm.addEventListener("submit", (e) => {
     description: descriptionInput.value,
   };
 
-   if (dataArrIndex === -1) {
+  if (dataArrIndex === -1) {
     taskData.unshift(taskObj);
   }
 
-  taskData.forEach(({id, title, date, description}) => {
-      tasksContainer.innerHTML += `
+  taskData.forEach(({ id, title, date, description }) => {
+    tasksContainer.innerHTML += `
         <div class="task" id="${id}">
         <p><strong>Title:</strong>${title}</p>
         <p><strong>Date:</strong>${date}</p>
@@ -88,7 +107,7 @@ taskForm.addEventListener("submit", (e) => {
         <button type="button" class="btn">Delete</button>
         </div>
       `
-    }
+  }
   );
- reset();
+  reset();
 });
